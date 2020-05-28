@@ -1,0 +1,23 @@
+$theme-colors: (
+  "primary": blue
+);
+
+$theme-colors: (
+  "secondary": grey
+);
+
+$theme-colors: (
+  "success": green
+);
+
+$theme-colors: (
+  "info": orange
+);
+
+$border-radius: (
+50px 
+);
+
+$font-family-base: #000000;
+
+@import "node_modules/bootstrap/scss/bootstrap";
