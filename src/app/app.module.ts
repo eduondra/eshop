@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -15,6 +16,7 @@ import { ProductsComponent } from './products/products.component';
     CategoryComponent,
     HomeComponent,
     ProductsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

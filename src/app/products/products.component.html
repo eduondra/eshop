@@ -1,3 +1,7 @@
+<div class="container">
 <h1>{{product1.title}}</h1>
 <img class="card-img-top" [src]="'http://kodytek.cz:8080/rest-api/' + product1.images[0].miniaturePath" alt="Card image cap">
-<a>{{product1.description}}</a>\\
+<a>{{product1.description}}</a>
+<br>
+<button class="btn btn-primary" (click)="getProduct(product1.id)">Přidat do košíku</button>
+</div>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Product} from '../modely/producty.model';
 import {HttpClient} from '@angular/common/http';
 import {CategoryService} from '../service/service.component';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 
 @Component({
@@ -14,7 +14,8 @@ export class ProductsComponent implements OnInit {
 
   public product1: Product;
 
-  constructor(private httpClient: HttpClient, private categorie: CategoryService, private route: ActivatedRoute) { }
+
+  constructor(private httpClient: HttpClient, private categorie: CategoryService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.queryParams
@@ -24,6 +25,10 @@ export class ProductsComponent implements OnInit {
             this.product1 = products;
           });
       });
+  }
+
+  getProduct(id: number) {
+    this.router.navigate(['cart'], {queryParams : {id}});
   }
 
 }
